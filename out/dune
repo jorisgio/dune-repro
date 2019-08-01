@@ -1,0 +1,8 @@
+(rule
+ (targets "test.ml")
+ (deps %{bin:gen_test})
+ (action
+  (progn
+   (bash "rm -rf ./*.ml*")
+   (run ../gen_files/gen_test.exe))))
+
